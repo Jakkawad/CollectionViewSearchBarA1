@@ -174,7 +174,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if (self.refreshControl == nil) {
             self.refreshControl            = UIRefreshControl()
             self.refreshControl?.tintColor = UIColor.whiteColor()
-            self.refreshControl?.addTarget(self, action: "refreashControlAction", forControlEvents: UIControlEvents.ValueChanged)
+            self.refreshControl?.addTarget(self, action: #selector(ViewController.refreashControlAction), forControlEvents: UIControlEvents.ValueChanged)
         }
         if !self.refreshControl!.isDescendantOfView(self.collectionView!) {
             self.collectionView!.addSubview(self.refreshControl!)
